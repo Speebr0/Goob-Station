@@ -14,3 +14,8 @@
         damage:
           types: # black powder is bad for your health.
             Poison: 0.2 # 4 damage/u
+      - !type:SetSolutionTemperature # once your internal temp reaches 474, the blackpowder should be changed to that temp and go off
+        conditions:
+        - !type:Temperature
+          min: 474
+        amount: 100000 # thermal energy, not temperature!
