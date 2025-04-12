@@ -4,4 +4,71 @@
 # SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
-# I'm just putting all that stuff up there because I think it's on everything.
+
+- type: martialArt
+  id: ChuFu
+  martialArtsForm: ChuFu
+  roundstartCombos: ChuFuTechniques
+
+- type: comboList
+  id: ChuFuTechniques
+  combos:
+  - ChuFuTornadoKick
+
+- type: combo
+  id: ChuFuTornadoKick
+  name: TornadoKick
+  martialArtsForm: ChuFu
+  attacks:
+  - Harm
+  - Harm
+  - Harm
+  - Disarm
+  event: !type:CqcSlamPerformedEvent { } # HEY DIPSHIT CHANGE THIS ONCE YOU MAKE THE SHAREDMARTIALARTSSYSTEM FOR CHUFU
+  extraDamage: 20 #
+  paralyzeTime: 5 # in seconds
+
+
+- type: combo
+  id: CQCKick
+  name: Kick
+  martialArtsForm: CloseQuartersCombat
+  attacks:
+  - Harm
+  - Harm
+  event: !type:CqcKickPerformedEvent
+  extraDamage: 10
+  staminaDamage: 25
+
+- type: combo
+  id: CQCRestrain
+  name: Restrain
+  martialArtsForm: CloseQuartersCombat
+  attacks:
+  - Grab
+  - Grab
+  event: !type:CqcRestrainPerformedEvent
+  paralyzeTime: 10
+  staminaDamage: 30
+
+- type: combo
+  id: CQCPressure
+  name: Pressure
+  martialArtsForm: CloseQuartersCombat
+  attacks:
+  - Disarm
+  - Grab
+  event: !type:CqcPressurePerformedEvent
+  staminaDamage: 65
+
+- type: combo
+  id: CQCConsecutive
+  name: Consecutive
+  martialArtsForm: CloseQuartersCombat
+  attacks:
+  - Disarm
+  - Disarm
+  - Harm
+  event: !type:CqcConsecutivePerformedEvent
+  extraDamage: 10
+  staminaDamage: 70
