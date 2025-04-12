@@ -48,3 +48,6 @@ uplink-cqc-desc = A manual that teaches a single user tactical Close-Quarters Co
 
 uplink-sleeping-carp-name = Martial Arts Scroll
 uplink-sleeping-carp-desc = This scroll contains the secrets of an ancient martial arts technique. You will master unarmed combat, deflecting ranged weapon fire. Learning this art means you will also refuse to use dishonorable ranged weaponry. Unable to be understood by vampire and changeling agents.
+
+uplink-chu-fu-name = Jade Slip
+uplink-chu-fu-desc = An authentic slip of jade containing an equally inauthentic martial art. You're certain this was stuff somebody saw in a movie. Does not restrict weapon usage.
