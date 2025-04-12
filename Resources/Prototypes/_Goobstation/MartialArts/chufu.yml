@@ -30,15 +30,21 @@
 
 
 - type: combo
-  id: CQCKick
-  name: Kick
-  martialArtsForm: CloseQuartersCombat
+  id: ChuFuHeartPunch
+  name: HeartPunch
+  martialArtsForm: ChuFu
   attacks:
   - Harm
   - Harm
-  event: !type:CqcKickPerformedEvent
-  extraDamage: 10
-  staminaDamage: 25
+  - Grab
+  - Disarm
+  - Harm
+  - Disarm
+  - Harm
+  - Harm
+  event: !type:CqcKickPerformedEvent # GUESS WHAT ANOTHER ONE YOU HAVE TO CHANGE
+  extraDamage: 100 # ALSO MAKE THIS LITERALLY REMOVE THE PUNCH-EE'S HEART
+  staminaDamage: 100
 
 - type: combo
   id: CQCRestrain
