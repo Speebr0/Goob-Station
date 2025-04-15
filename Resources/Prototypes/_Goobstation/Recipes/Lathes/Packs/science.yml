@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Static
 - type: latheRecipePack
   id: ScienceExplosivesTriggers
@@ -11,6 +12,13 @@
   recipes:
   - FlashPayload # If you hate this, please find another pack to share between sci and sec that won't give someone something they shouldnt have
 
+=======
+# SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 BombasterDS <deniskaporoshok@gmail.com>
+# SPDX-FileCopyrightText: 2025 BombasterDS2 <shvalovdenis.workmail@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+>>>>>>> master
 # Dynamic
 - type: latheRecipePack
   id: BluespaceTheory
