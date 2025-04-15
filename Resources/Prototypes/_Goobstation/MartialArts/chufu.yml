@@ -47,15 +47,23 @@
   staminaDamage: 100
 
 - type: combo
-  id: CQCRestrain
-  name: Restrain
-  martialArtsForm: CloseQuartersCombat
+  id: ChuFuTwinPeaks
+  name: TwinPeaksDescent
+  martialArtsForm: ChuFu
   attacks:
+  - Harm
+  - Harm
+  - Shove
+  - Harm
+  - Harm
+  - Shove
   - Grab
+  - Harm
+  - Shove
   - Grab
-  event: !type:CqcRestrainPerformedEvent
-  paralyzeTime: 10
-  staminaDamage: 30
+  - Harm
+  event: !type:CqcRestrainPerformedEvent # YEAH CHANGE THIS TOO
+  extraDamage: 350 # Instagib :godo:
 
 - type: combo
   id: CQCPressure
