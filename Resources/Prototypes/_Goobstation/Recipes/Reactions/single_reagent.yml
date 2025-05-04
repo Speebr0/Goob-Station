@@ -46,11 +46,13 @@
   reactants:
     BlackPowder:
       amount: 1
-      minimum: 200 # I have no idea if this will work, YAML linter will probably explode
-  effects:
-    - !type:ExplosionReactionEffect
-      explosionType: Default
-      maxIntensity: 100
-      intensityPerUnit: 3
-      intensitySlope: 1 # more power requires more spread-out to reduce instakill potential
-      maxTotalIntensity: 1800 # 600 Black Powder cap
+      #minimum: 200 # FIGURE OUT HOW TO ADD THIS SORT OF THING TO 6 YEAR OLD CODE
+  #effects:
+  #  - !type:ExplosionReactionEffect
+  #    explosionType: Default
+  #    maxIntensity: 100
+  #    intensityPerUnit: 3
+  #    intensitySlope: 1 # more power requires more spread-out to reduce instakill potential
+  #    maxTotalIntensity: 1800 # 600 Black Powder cap
+  products:
+    Water: 1 # for testing
