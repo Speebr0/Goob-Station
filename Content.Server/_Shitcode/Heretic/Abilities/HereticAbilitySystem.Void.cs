@@ -2,6 +2,9 @@
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aiden <aiden@djkraz.com>
 // SPDX-FileCopyrightText: 2025 Aviu00 <93730715+Aviu00@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Aviu00 <aviu00@protonmail.com>
+// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 Marcus F <199992874+thebiggestbruh@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Misandry <mary@thughunt.ing>
 // SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
 // SPDX-FileCopyrightText: 2025 username <113782077+whateverusername0@users.noreply.github.com>
@@ -9,23 +12,22 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Server.Atmos.Components;
-using Content.Server.Body.Components;
+using Content.Goobstation.Shared.Atmos.Components;
+using Content.Goobstation.Shared.Body.Components;
+using Content.Goobstation.Shared.Temperature.Components;
 using Content.Server.Heretic.Components.PathSpecific;
 using Content.Server.Magic;
-using Content.Server.Temperature.Components;
 using Content.Shared._Goobstation.Heretic.Components;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.Heretic;
-using Content.Shared.Temperature.Components;
 using Robust.Shared.Audio;
 using Robust.Shared.Physics.Components;
 using System.Linq;
 
 namespace Content.Server.Heretic.Abilities;
 
-public sealed partial class HereticAbilitySystem : EntitySystem
+public sealed partial class HereticAbilitySystem
 {
     private void SubscribeVoid()
     {
@@ -39,13 +41,12 @@ public sealed partial class HereticAbilitySystem : EntitySystem
 
     private void OnAristocratWay(Entity<HereticComponent> ent, ref HereticAristocratWayEvent args)
     {
-        RemComp<TemperatureComponent>(ent);
-        RemComp<TemperatureSpeedComponent>(ent);
-        RemComp<RespiratorComponent>(ent);
+        EnsureComp<SpecialLowTempImmunityComponent>(ent);
+        EnsureComp<SpecialBreathingImmunityComponent>(ent);
     }
     private void OnAscensionVoid(Entity<HereticComponent> ent, ref HereticAscensionVoidEvent args)
     {
-        RemComp<BarotraumaComponent>(ent);
+        EnsureComp<SpecialPressureImmunityComponent>(ent);
         EnsureComp<AristocratComponent>(ent);
     }
 

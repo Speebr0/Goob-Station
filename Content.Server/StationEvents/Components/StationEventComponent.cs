@@ -76,13 +76,19 @@
 // SPDX-FileCopyrightText: 2024 voidnull000 <18663194+voidnull000@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Aidenkrz <aiden@djkraz.com>
+// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+// SPDX-FileCopyrightText: 2025 Ilya246 <ilyukarno@gmail.com>
 // SPDX-FileCopyrightText: 2025 Misandry <mary@thughunt.ing>
+// SPDX-FileCopyrightText: 2025 Solstice <solsticeofthewinter@gmail.com>
+// SPDX-FileCopyrightText: 2025 SolsticeOfTheWinter <solsticeofthewinter@gmail.com>
 // SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Goobstation.Common.StationEvents.SecretPlus;
 using Content.Goobstation.Server.StationEvents.Metric;
 using Robust.Shared.Audio;
+using Robust.Shared.Prototypes; // Goobstation
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Server.StationEvents.Components;
@@ -98,6 +104,12 @@ public sealed partial class StationEventComponent : Component
     public const float WeightNormal = 10.0f;
     public const float WeightHigh = 15.0f;
     public const float WeightVeryHigh = 20.0f;
+
+    /// <summary>
+    /// Can this event be selected randomly by the game director?
+    /// </summary>
+    [DataField]
+    public bool IsSelectable = true;
 
     [DataField]
     public float Weight = WeightNormal;
@@ -179,5 +191,18 @@ public sealed partial class StationEventComponent : Component
     /// </summary>
     [DataField("chaos")]
     public ChaosMetrics Chaos = new ChaosMetrics();
+
+    /// <summary>
+    ///  What type of event is this.
+    ///  Used by SecretPlus to determine whether it's allowed to fire this event.
+    /// </summary>
+    [DataField]
+    public ProtoId<EventTypePrototype> EventType = "Neutral";
+
+    /// <summary>
+    ///  Used by SecretPlus to rate which event should be fired.
+    /// </summary>
+    [DataField]
+    public float ChaosScore = 100f;
     // Goobstation end
 }
