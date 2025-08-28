@@ -104,3 +104,6 @@ reagent-desc-hercuri = Strong coolant, both serviceable for internal and externa
 
 reagent-name-herignis = herignis
 reagent-desc-herignis = Can thaw out most chilled of lizardmen, recommended to only use in small doses, as it can quickly heat up its metaboliser to dangerous levels.
+
+reagent-name-phoenizine = phoenizine
+reagent-desc-phoenizine = Capable of bringing people back from the dead, burning away impurities and sealing wounds shut. Unfortunately, it also skyrockets body temperature and sets the recipient on fire.

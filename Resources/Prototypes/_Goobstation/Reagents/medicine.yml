@@ -1534,3 +1534,34 @@
         identifier: Suffocation
         amount: -50
         time: 12
+
+- type: reagent
+  id: Phoenizine
+  name: reagent-name-phoenizine
+  group: Medicine
+  desc: reagent-desc-phoenizine
+  physicalDesc: reagent-physical-desc-phoenizine
+  flavor: rebirth
+  color: "#ff7f00"
+  worksOnTheDead: true
+  metabolisms:
+    Medicine:
+    metabolismRate: 0.5 # I may change this to balance the recipe
+    effects:
+      - !type:ModifyBloodLevel
+        amount: 10
+      - !type:ModifyBleedAmount
+        amount: -2
+      - !type:HealthChange # Temporary values - CHANGE BEFORE PR
+        damage:
+          groups:
+            Brute: -20
+            Cold: -20
+            Airloss: -20
+            Toxin: -20
+      - !type:AdjustTemperature
+        conditions:
+        - !type:Temperature # sets you on FIRE!!!
+          max: 690
+        amount: 10000
+      - !type:Ignite
